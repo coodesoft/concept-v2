@@ -1591,3 +1591,9 @@ nav.navigation.post-navigation {
 .nav-next .fa {
     margin-left: 5px;
 }
+.site-header {
+    height: 100vh;
+}
+.header-right {
+    display: none;
+}
