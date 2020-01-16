@@ -1594,12 +1594,21 @@ nav.navigation.post-navigation {
 .site-header {
     height: 100vh;
 }
-.header-right {
-    display: none;
+
+/** Custom style **/
+
+.site-heading {
+    width: 100%;
 }
-.header-search-form {
-    display: none;
+.home-link {
+    width: 30px;
+    margin: 10% auto 0;
 }
-.footer-credits-text {
-    display: none;
+.home-link a svg {
+    height: 50px;
+}
+.site-branding-logo {
+    width: 50%;
+    margin: 0 auto;
+    float: inherit;
 }

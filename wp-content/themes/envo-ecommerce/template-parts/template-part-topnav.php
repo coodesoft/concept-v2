@@ -10,7 +10,7 @@
 <div class="site-header container-fluid">
 	<div class="<?php echo esc_attr( get_theme_mod( 'header_content_width', 'container' ) ); ?>" >
 		<div class="heading-row row" >
-			<div class="site-heading <?php echo esc_attr( class_exists( 'WooCommerce' ) == true ? 'col-md-4' : 'col-md-6' ); ?> col-xs-12" >
+			<div class="site-heading <?php echo esc_attr( class_exists( 'WooCommerce' ) == true ? 'col-md-6' : 'col-md-6' ); ?> col-xs-12" >
 				<div class="site-branding-logo">
 					<?php the_custom_logo(); ?>
 				</div>
@@ -30,47 +30,23 @@
 						</p>
 					<?php endif; ?>
 				</div><!-- .site-branding-text -->
-			</div>
-			<div class="col-md-6 col-xs-12">
-				<?php if ( class_exists( 'WooCommerce' ) ) { ?>
-					<div class="header-search-form">
-						<form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-							<select class="header-search-select" name="product_cat">
-								<option value=""><?php esc_html_e( 'All Categories', 'envo-ecommerce' ); ?></option> 
-								<?php
-								$categories = get_categories( 'taxonomy=product_cat' );
-								foreach ( $categories as $category ) {
-									$option = '<option value="' . esc_attr( $category->category_nicename ) . '">';
-									$option .= esc_html( $category->cat_name );
-									$option .= ' (' . absint( $category->category_count ) . ')';
-									$option .= '</option>';
-									echo $option; // WPCS: XSS OK.
-								}
-								?>
-							</select>
-							<input type="hidden" name="post_type" value="product" />
-							<input class="header-search-input" name="s" type="text" placeholder="<?php esc_attr_e( 'Search products...', 'envo-ecommerce' ); ?>"/>
-							<button class="header-search-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-						</form>
-					</div>
-				<?php } ?>
-				<?php if ( is_active_sidebar( 'envo-ecommerce-header-area' ) ) { ?>
-					<div class="site-heading-sidebar" >
-						<?php dynamic_sidebar( 'envo-ecommerce-header-area' ); ?>
-					</div>
-				<?php } ?>
-			</div>
-			<?php if ( function_exists( 'envo_ecommerce_header_cart' ) && class_exists( 'WooCommerce' ) ) { ?>
-				<div class="header-right col-md-2 hidden-xs" >
-						<?php envo_ecommerce_header_cart(); ?>
-						<?php envo_ecommerce_my_account(); ?>
-					</div>	
-				<?php } ?>
-			</div>
+			</div>	
+		</div>
+		<div class="home-link">
+			<a href="#explore">
+				<svg class="svg-inline--fa fa-angle-double-down fa-w-8 fa-2x" aria-hidden="true" data-fa-processed=""
+					data-prefix="fal" data-icon="angle-double-down" role="img" xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 256 512">
+					<path fill="currentColor"
+						d="M119.5 262.9L3.5 145.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 223.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 263c-4.7 4.6-12.3 4.6-17-.1zm17 128l116-117.8c4.7-4.7 4.7-12.3 0-17l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L128 351.3 27.6 249.1c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l116 117.8c4.7 4.6 12.3 4.6 17-.1z">
+					</path>
+				</svg>
+			</a>
 		</div>
 	</div>
+</div>
 	<?php do_action( 'envo_ecommerce_before_menu' ); ?> 
-	<div class="main-menu">
+	<div id="explore" class="main-menu">
 		<nav id="site-navigation" class="navbar navbar-default">     
 			<div class="container">   
 				<div class="navbar-header">
