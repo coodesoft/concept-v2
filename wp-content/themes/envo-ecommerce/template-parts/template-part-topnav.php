@@ -10,7 +10,7 @@
 <div class="site-header container-fluid">
 	<div class="<?php echo esc_attr( get_theme_mod( 'header_content_width', 'container' ) ); ?>" >
 		<div class="heading-row row" >
-			<div class="site-heading <?php echo esc_attr( class_exists( 'WooCommerce' ) == true ? 'col-md-6' : 'col-md-6' ); ?> col-xs-12" >
+			<div class="site-heading col-md-6 col-xs-12" >
 				<div class="site-branding-logo">
 					<?php the_custom_logo(); ?>
 				</div>
