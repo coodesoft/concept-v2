@@ -52,9 +52,10 @@ Images License: GNU General Public License v2 or later
     width: 25%;
 }
 
-.logo img {
+.logo img, .logo-container img {
     max-width: 100%;
     max-height: 150px;
+    margin: 0 auto;
 }
 
 .filial-title, .office-title, .links-list li > * {
@@ -74,4 +75,50 @@ Images License: GNU General Public License v2 or later
 .filial-item > *, .office-item > * {
     font-size: 1em;
     font-weight: 800;
+}
+
+ul#site-header-cart, span.woocommerce-Price-amount.amount, span.count {
+    display: none!important;
+}
+
+nav#site-navigation {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.a.cart-contents {
+    padding: 0.5em 0!important;
+    display: block;
+    position: relative;
+    background-color: transparent;
+    height: auto;
+    width: auto;
+    text-indent: 0;
+}
+
+.site-header-cart .cart-contents {
+    padding: 0;
+}
+
+.col-full.custom-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.site-search.custom-search {
+    width: 80%!important;
+    float:none!important;
+    padding-top: 30px;
+}
+
+.search-container , .logo-container , .cart-container {
+    width: 33.33%;
+}
+
+.cart-container {
+    padding-top: 30px;
+}
+
+a.mailto {
+    padding-left: 25%;
 }

@@ -28,25 +28,27 @@
 	<?php do_action( 'storefront_before_header' ); ?>
 
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
-
-		<?php
-		/**
-		 * Functions hooked into storefront_header action
-		 *
-		 * @hooked storefront_header_container                 - 0
-		 * @hooked storefront_skip_links                       - 5
-		 * @hooked storefront_social_icons                     - 10
-		 * @hooked storefront_site_branding                    - 20
-		 * @hooked storefront_secondary_navigation             - 30
-		 * @hooked storefront_product_search                   - 40
-		 * @hooked storefront_header_container_close           - 41
-		 * @hooked storefront_primary_navigation_wrapper       - 42
-		 * @hooked storefront_primary_navigation               - 50
-		 * @hooked storefront_header_cart                      - 60
-		 * @hooked storefront_primary_navigation_wrapper_close - 68
-		 */
-		do_action( 'storefront_header' );
-		?>
+			
+		<div class="col-full custom-container">
+			<div class="search-container">
+				<?php
+				if ( storefront_is_woocommerce_activated() ) { ?>
+					<div class="site-search custom-search">
+						<?php the_widget( 'WC_Widget_Product_Search', 'title=' ); ?>
+					</div>
+				<?php } ?>
+			</div>
+			<div class="logo-container">
+				<img src="<?php echo get_template_directory_uri() . '-child/assets/img/cropped-Logo-cuadrado-scaled.png';?>" alt="logo">
+			</div>
+			<div class="cart-container">
+				<a class="mailto" href="mailto:info@conceptmoda.com.ar">info@conceptmoda.com.ar</a>
+				<?php custom_header_cart(); ?>
+			</div>
+		</div>
+		<div class="navigation">
+			<?php storefront_primary_navigation(); ?>
+		</div>
 
 	</header><!-- #masthead -->
 
