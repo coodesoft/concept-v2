@@ -19,12 +19,12 @@
 
             <div class="links">
                 <ul class="links-list">
-                    <li><a href="http://localhost/concept/">Home</a></li>
-                    <li><a href="http://localhost/concept/nosotros">Nosotros</a></li>
-                    <li><a href="http://localhost/concept/servicios">Servicios</a></li>
-                    <li><a href="http://localhost/concept/productos">Productos</a></li>
-                    <li><a href="http://localhost/concept/novedades">Novedades</a></li>
-                    <li><a href="http://localhost/concept/contacto">Contacto</a></li>
+                    <li><a href="<?php echo get_site_url() . '/';?>">Home</a></li>
+                    <li><a href="<?php echo get_site_url() . '/nosotros';?>">Nosotros</a></li>
+                    <li><a href="<?php echo get_site_url() . '/servicios';?>">Servicios</a></li>
+                    <li><a href="<?php echo get_site_url() . '/productos';?>">Productos</a></li>
+                    <li><a href="<?php echo get_site_url() . '/novedades';?>">Novedades</a></li>
+                    <li><a href="<?php echo get_site_url() . '/contacto';?>">Contacto</a></li>
                 </ul>
             </div>
             <div class="filial">
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="logo">
-                <img src="http://localhost/concept/wp-content/uploads/2019/11/Logo-cuadrado.png" alt="logo">
+                <img src="<?php echo get_template_directory_uri() . '/assets/img/cropped-Logo-cuadrado-scaled.png';?>" alt="logo">
             </div>
 
 		</div><!-- .col-full -->
