@@ -19,7 +19,6 @@
 
             <div class="links">
                 <ul class="links-list">
-                <?php echo get_site_url(); ?>
                     <li><a href="<?php echo get_site_url() . '/';?>">Home</a></li>
                     <li><a href="<?php echo get_site_url() . '/nosotros';?>">Nosotros</a></li>
                     <li><a href="<?php echo get_site_url() . '/servicios';?>">Servicios</a></li>
