@@ -105,6 +105,12 @@ nav#site-navigation {
     flex-wrap: nowrap;
 }
 
+@media (min-width: 768px){
+    .col-full.custom-container{
+        max-width: 80em;
+    }
+}
+
 .site-search.custom-search {
     width: 80%!important;
     float:none!important;
@@ -113,12 +119,56 @@ nav#site-navigation {
 
 .search-container , .logo-container , .cart-container {
     width: 33.33%;
+    height: 5em;
+}
+
+#product-search-input {
+    padding: 0.6180469716em;
+    background-color: white;
+    color: #43454b;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    background: white;
+    border: 1px solid black;
+    font-weight: normal;
+    height: 2em;
+}
+
+.submit-hidden {
+    display: none;
+}
+
+.sendmail {
+    display: inherit;
+    height: 2em;
+}
+
+i.fas.fa-envelope {
+    padding-top: 0.3em;
+}
+
+a.mailto {
+    color: black;
+    padding-left: 0.5em;
+}
+
+button.login {
+    padding: 0em 2em;
+    margin-left: 1em;
+    height: max-content;
+    background: white;
+    border: 1px solid black;
+    font-weight: normal;
 }
 
 .cart-container {
     padding-top: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    margin-left: auto;
 }
 
-a.mailto {
-    padding-left: 25%;
+ul#custom-header-cart {
+    margin-left: 0.5em;
 }
