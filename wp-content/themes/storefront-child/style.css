@@ -52,9 +52,15 @@ Images License: GNU General Public License v2 or later
     width: 25%;
 }
 
-.logo img, .logo-container img {
+.logo img{
     max-width: 100%;
     max-height: 150px;
+    margin: 0 auto;
+}
+
+.logo-container img {
+    max-width: 100%;
+    max-height: 100px;
     margin: 0 auto;
 }
 
@@ -79,6 +85,11 @@ Images License: GNU General Public License v2 or later
 
 ul#site-header-cart, span.woocommerce-Price-amount.amount, span.count {
     display: none!important;
+}
+
+.navigation {
+    max-width: 80em;
+    margin: 0 auto;
 }
 
 nav#site-navigation {
