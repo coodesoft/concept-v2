@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri() . '/assets/img/cropped-Logo-cuadrado-scaled.png';?>" alt="logo">
+                <img src="<?php echo get_template_directory_uri() . '-child/assets/img/cropped-Logo-cuadrado-scaled.png';?>" alt="logo">
             </div>
 
 		</div><!-- .col-full -->

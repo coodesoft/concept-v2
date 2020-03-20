@@ -52,9 +52,16 @@ Images License: GNU General Public License v2 or later
     width: 25%;
 }
 
-.logo img {
+.logo img{
     max-width: 100%;
     max-height: 150px;
+    margin: 0 auto;
+}
+
+.logo-container img {
+    max-width: 100%;
+    max-height: 100px;
+    margin: 0 auto;
 }
 
 .filial-title, .office-title, .links-list li > * {
@@ -74,4 +81,105 @@ Images License: GNU General Public License v2 or later
 .filial-item > *, .office-item > * {
     font-size: 1em;
     font-weight: 800;
+}
+
+ul#site-header-cart, span.woocommerce-Price-amount.amount, span.count {
+    display: none!important;
+}
+
+.navigation {
+    max-width: 80em;
+    margin: 0 auto;
+}
+
+nav#site-navigation {
+    margin: 0 auto!important;
+    float: none!important;
+}
+
+.a.cart-contents {
+    padding: 0.5em 0!important;
+    display: block;
+    position: relative;
+    background-color: transparent;
+    height: auto;
+    width: auto;
+    text-indent: 0;
+}
+
+.site-header-cart .cart-contents {
+    padding: 0;
+}
+
+.col-full.custom-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@media (min-width: 768px){
+    .col-full.custom-container{
+        max-width: 80em;
+    }
+}
+
+.site-search.custom-search {
+    width: 80%!important;
+    float:none!important;
+    padding-top: 30px;
+}
+
+.search-container , .logo-container , .cart-container {
+    width: 33.33%;
+    height: 5em;
+}
+
+#product-search-input {
+    padding: 0.6180469716em;
+    background-color: white;
+    color: #43454b;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    background: white;
+    border: 1px solid black;
+    font-weight: normal;
+    height: 2em;
+}
+
+.submit-hidden {
+    display: none;
+}
+
+.sendmail {
+    display: inherit;
+    height: 2em;
+}
+
+i.fas.fa-envelope {
+    padding-top: 0.3em;
+}
+
+a.mailto {
+    color: black;
+    padding-left: 0.5em;
+}
+
+button.login {
+    padding: 0em 2em;
+    margin-left: 1em;
+    height: max-content;
+    background: white;
+    border: 1px solid black;
+    font-weight: normal;
+}
+
+.cart-container {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    margin-left: auto;
+}
+
+ul#custom-header-cart {
+    margin-left: 0.5em;
 }
