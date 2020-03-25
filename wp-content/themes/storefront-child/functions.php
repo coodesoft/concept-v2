@@ -12,6 +12,11 @@ function my_theme_enqueue_styles() {
     );
 }
 
+add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
+function my_custom_scripts() {
+    wp_enqueue_script( 'stick-js', get_stylesheet_directory_uri() . '/assets/js/stick.js', array( 'jquery' ),'',true );
+}
+
 remove_action( 'storefront_header', 'storefront_header_cart', 10 );
 add_action( 'storefront_header', 'custom_header_cart', 70 );
 function custom_header_cart() {
