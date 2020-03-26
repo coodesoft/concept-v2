@@ -84,7 +84,6 @@ body {
 
 .filial-item > *, .office-item > * {
     font-size: 1em;
-    font-weight: 800;
 }
 
 /************** header-area ****************/
@@ -192,10 +191,12 @@ ul#custom-header-cart {
 .logo-nav {
     width: 50px;
     visibility: hidden;
+    margin: 1em;
 }
 
 .cart-nav {
     visibility: hidden;
+    margin: 1em 2em 1em 1em;
 }
 
 .unhidden {
