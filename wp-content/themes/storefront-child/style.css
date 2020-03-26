@@ -27,6 +27,10 @@ FontAwesome License: SIL Open Font License - http://scripts.sil.org/cms/scripts/
 Images License: GNU General Public License v2 or later
 */
 
+body { 
+	font-family: "Josefin-Sans", "roboto";
+}
+
 /************** footer-area ****************/
 
 .site-footer {
@@ -80,21 +84,17 @@ Images License: GNU General Public License v2 or later
 
 .filial-item > *, .office-item > * {
     font-size: 1em;
-    font-weight: 800;
+}
+
+/************** header-area ****************/
+
+.col-full.custom-container {
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 ul#site-header-cart, span.woocommerce-Price-amount.amount, span.count {
     display: none!important;
-}
-
-.navigation {
-    max-width: 80em;
-    margin: 0 auto;
-}
-
-nav#site-navigation {
-    margin: 0 auto!important;
-    float: none!important;
 }
 
 .a.cart-contents {
@@ -109,11 +109,6 @@ nav#site-navigation {
 
 .site-header-cart .cart-contents {
     padding: 0;
-}
-
-.col-full.custom-container {
-    display: flex;
-    flex-wrap: nowrap;
 }
 
 @media (min-width: 768px){
@@ -147,6 +142,13 @@ nav#site-navigation {
 
 .submit-hidden {
     display: none;
+}
+
+.social-header-links {
+    width: 4em;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    vertical-align: text-bottom;
 }
 
 .sendmail {
@@ -183,3 +185,41 @@ button.login {
 ul#custom-header-cart {
     margin-left: 0.5em;
 }
+
+/************** navigation ****************/
+
+.logo-nav {
+    width: 50px;
+    visibility: hidden;
+    margin: 1em;
+}
+
+.cart-nav {
+    visibility: hidden;
+    margin: 1em 2em 1em 1em;
+}
+
+.unhidden {
+    visibility: visible;
+}
+
+.navigation {
+    margin: 0 auto;
+    display: flex;
+    height: 4em;
+}
+
+nav#site-navigation {
+    margin: 0 auto!important;
+    float: none!important;
+}
+
+.navigation.sticky {
+    position: fixed;
+    top: 0;
+    max-width: unset;
+    width: 100%;
+    background: white;
+    border-bottom: 0.1px solid lightgray;
+}
+
